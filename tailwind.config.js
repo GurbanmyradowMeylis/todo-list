@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js}", "./**/*.{html,js,svg}"],
+  content: ["./src/**/*.{html,js}", "./**/*.{html,js}", "./index.html"],
   theme: {
     extend: {
       borderRadius: {

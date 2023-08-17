@@ -14,278 +14,67 @@
         <input
           type="text"
           placeholder="type text..."
-          class="rounded-1xl px-2 py-1 pl-2 text-left border-2 border-solid border-purple-600 focus:outline-2 focus:outline-purple-700 shadow-2xl placeholder:text-[#7F02BD] placeholder:font-semibold"
+          class="rounded-1xl px-2 py-1 pl-2 text-left outline-2 outline outline-gray-500 hover:outline-purple-800 shadow-2xl placeholder:text-[#7F02BD] focus:outline-purple-900"
         />
         <button
           class="bg-blue-500 hover:bg-blue-600 duration-500 text-white rounded-md pt-1 pb-1 pr-3 pl-3 font-semibold"
+          id="add"
         >
           ADD
         </button>
       </div>
+      <svg
+        width="800px"
+        height="800px"
+        viewBox="0 0 24 24"
+        xmlns="http://www.w3.org/2000/svg"
+        class="recycle_bin-primary hidden"
+        id="remover"
+      >
+        <g stroke-width="0" />
 
-      <section>
+        <g stroke-linecap="round" stroke-linejoin="round" />
+
+        <g>
+          <path
+            d="M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z"
+          />
+        </g>
+      </svg>
+
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        width="800px"
+        height="800px"
+        viewBox="0 0 236.757 236.757"
+        xml:space="preserve"
+        class="editor-primary hidden"
+        id="editor"
+      >
+        <g stroke-width="0" />
+
+        <g stroke-linecap="round" stroke-linejoin="round" />
+
+        <g>
+          <g>
+            <path
+              d="M121.816,123.17l-7.293,0.643l0.627-7.293c2.231-26.009,5.587-29.366,6.855-30.633l83.923-83.92 C201.821,0.688,197.45,0,192.928,0H43.841C19.669,0,0,19.663,0,43.847V192.91c0,24.182,19.669,43.847,43.841,43.847h149.081 c24.176,0,43.835-19.665,43.835-43.847V43.841c0-3.63-0.492-7.134-1.327-10.508l-82.998,82.998 C151.188,117.574,147.886,120.877,121.816,123.17z"
+            />
+          </g>
+        </g>
+      </svg>
+      <section id="cards">
         <h1 class="text-center mb-5 font-bold text-4xl text-white mt-3">
           List
         </h1>
-        <div class="grid grid-cols-3 gap-5 place-items-center px-10 pb-5">
-          <div>
-            <div
-              class="flex flex-col bg-white rounded-[20px] gap-3 p-5 font-semibold shadow-xl"
-            >
-              <div class="text-[22px]"><h1>Id : 1</h1></div>
-              <div>
-                <p class="text-lg">
-                  Some text that not have any reason or point, therefor why you
-                  don't have to try to read this note, have a nice day, I think
-                  it will be good if you'll be friendly:)
-                </p>
-              </div>
-              <div class="text-[#999999]">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="flex gap-1">
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <svg
-                  width="800px"
-                  height="800px"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="stroke-blue-500 fill-blue-500 w-6 h-6 hover:stroke-red-500 hover:fill-red-500"
-                >
-                  <g id="SVGRepo_bgCarrier" stroke-width="0" />
-
-                  <g
-                    id="SVGRepo_tracerCarrier"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-
-                  <g id="SVGRepo_iconCarrier">
-                    <path
-                      d="M5.755,20.283,4,8H20L18.245,20.283A2,2,0,0,1,16.265,22H7.735A2,2,0,0,1,5.755,20.283ZM21,4H16V3a1,1,0,0,0-1-1H9A1,1,0,0,0,8,3V4H3A1,1,0,0,0,3,6H21a1,1,0,0,0,0-2Z"
-                    />
-                  </g>
-                </svg>
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-2.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="flex flex-col bg-white rounded-[20px] gap-3 p-5 font-semibold shadow-xl"
-            >
-              <div class="text-[22px]"><h1>Id : 1</h1></div>
-              <div>
-                <p class="text-lg">
-                  Some text that not have any reason or point, therefor why you
-                  don't have to try to read this note, have a nice day, I think
-                  it will be good if you'll be friendly:)
-                </p>
-              </div>
-              <div class="text-gray-400">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="flex gap-1">
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-2.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-2.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="flex flex-col bg-white rounded-[20px] gap-3 p-5 font-semibold shadow-xl"
-            >
-              <div class="text-[22px]"><h1>Id : 1</h1></div>
-              <div>
-                <p class="text-lg">
-                  Some text that not have any reason or point, therefor why you
-                  don't have to try to read this note, have a nice day, I think
-                  it will be good if you'll be friendly:)
-                </p>
-              </div>
-              <div class="text-[#999999]">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="flex gap-1">
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-2.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-2.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="flex flex-col bg-white rounded-[20px] gap-3 p-5 font-semibold shadow-xl"
-            >
-              <div class="text-[22px]"><h1>Id : 1</h1></div>
-              <div>
-                <p class="text-lg">
-                  Some text that not have any reason or point, therefor why you
-                  don't have to try to read this note, have a nice day, I think
-                  it will be good if you'll be friendly:)
-                </p>
-              </div>
-              <div class="text-[#999999]">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="flex gap-1">
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-2.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-2.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="flex flex-col bg-white rounded-[20px] gap-3 p-5 font-semibold shadow-xl"
-            >
-              <div class="text-[22px]"><h1>Id : 1</h1></div>
-              <div>
-                <p class="text-lg">
-                  Some text that not have any reason or point, therefor why you
-                  don't have to try to read this note, have a nice day, I think
-                  it will be good if you'll be friendly:)
-                </p>
-              </div>
-              <div class="text-[#999999]">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="flex gap-1">
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-2.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-2.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div>
-            <div
-              class="flex flex-col bg-white rounded-[20px] gap-3 p-5 font-semibold shadow-xl"
-            >
-              <div class="text-[22px]"><h1>Id : 1</h1></div>
-              <div>
-                <p class="text-lg">
-                  Some text that not have any reason or point, therefor why you
-                  don't have to try to read this note, have a nice day, I think
-                  it will be good if you'll be friendly:)
-                </p>
-              </div>
-              <div class="text-[#999999]">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-              <div class="flex gap-1">
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/delete-svgrepo-com-2.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-1.svg"
-                  alt=""
-                />
-                <img
-                  class="w-6 h-6 rounded-1xl hover:"
-                  src="./svg/edit-note-svgrepo-com-2.svg"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <div
+          class="grid grid-cols-3 gap-5 place-items-center px-10 pb-5 max-sm:grid-cols-1 max-md:grid-cols-2"
+          id="wrapperOfCard"
+        ></div>
       </section>
     </div>
+    <script src="./js/app.js"></script>
   </body>
 </html>
