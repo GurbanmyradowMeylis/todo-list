@@ -7,21 +7,16 @@
     <title>Document</title>
     <link rel="stylesheet" href="./dist/output.css" />
   </head>
-  <body class="bg-[#CF6FFF]">
+  <body
+    class="bg-[#CF6FFF]"
+    onload="gettingInfo()"
+    onbeforeunload="savingInfo()"
+  >
     <div id="wrapper" class="flex flex-col gap-2">
       <h1 class="text-center font-bold text-4xl text-white mt-3">TO DO LIST</h1>
       <div class="flex justify-center gap-5">
-        <input
-          type="text"
-          placeholder="type text..."
-          class="rounded-1xl px-2 py-1 pl-2 text-left outline-2 outline outline-gray-500 hover:outline-purple-800 shadow-2xl placeholder:text-[#7F02BD] focus:outline-purple-900"
-        />
-        <button
-          class="bg-blue-500 hover:bg-blue-600 duration-500 text-white rounded-md pt-1 pb-1 pr-3 pl-3 font-semibold"
-          id="add"
-        >
-          ADD
-        </button>
+        <input type="text" placeholder="type text..." class="input" />
+        <button class="button-primary" id="add">ADD</button>
       </div>
       <svg
         width="800px"

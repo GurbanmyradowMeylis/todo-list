@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer components {
+  .input {
+    @apply rounded-1xl px-2 py-1 pl-2 text-left outline-2 outline outline-gray-500 hover:outline-purple-800 shadow-2xl placeholder:text-[#7F02BD] focus:outline-purple-900;
+  }
+  .button-primary {
+    @apply bg-blue-500 hover:bg-blue-600 duration-500 text-white rounded-md py-1 px-3 font-semibold cursor-pointer;
+  }
   .recycle_bin-primary {
     @apply stroke-blue-500 fill-blue-500 w-6 h-6 cursor-pointer hover:stroke-red-500 hover:fill-red-500 transition-colors;
   }
