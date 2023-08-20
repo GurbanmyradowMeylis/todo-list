@@ -13,10 +13,24 @@
     onbeforeunload="savingInfo()"
   >
     <div id="wrapper" class="flex flex-col gap-2">
-      <h1 class="text-center font-bold text-4xl text-white mt-3">TO DO LIST</h1>
-      <div class="flex justify-center gap-5">
-        <input type="text" placeholder="type text..." class="input" />
-        <button class="button-primary" id="add">ADD</button>
+      <div class="flex flex-col gap-5">
+        <h1 class="text-center font-bold text-4xl text-white mt-3">
+          TO DO LIST
+        </h1>
+        <div class="flex justify-center gap-5">
+          <input
+            type="text"
+            placeholder="type text..."
+            class="input"
+            id="input-content"
+          />
+          <button class="button-primary" id="add">ADD</button>
+        </div>
+        <div class="flex justify-center">
+          <button class="clear-button text-2xl" id="removerAll">
+            Clear all
+          </button>
+        </div>
       </div>
       <svg
         width="800px"
@@ -60,16 +74,11 @@
           </g>
         </g>
       </svg>
-      <section id="cards">
-        <h1 class="text-center mb-5 font-bold text-4xl text-white mt-3">
-          List
-        </h1>
-        <div
-          class="grid grid-cols-3 gap-5 place-items-center px-10 pb-5 max-sm:grid-cols-1 max-md:grid-cols-2"
-          id="wrapperOfCard"
-        ></div>
+      <section id="cards" class="flex flex-col">
+        <div class="cards__parent-cards" id="wrapperOfCard"></div>
       </section>
     </div>
+
     <script src="./js/app.js"></script>
   </body>
 </html>
