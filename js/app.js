@@ -96,7 +96,7 @@ function adderTodoList(
   container.className = "card";
   content.className = "text-lg";
 
-  containerOfDate.className = "text-[#999999] flex-auto";
+  containerOfDate.className = "text-[#999999] flex-auto flex flex-col gap-3";
   containerOfSvgs.className = "card__svgs";
   id.className = "card__id";
   // ! end
@@ -168,8 +168,8 @@ function adderTodoList(
         input = document.createElement("input"),
         button = document.createElement("button");
       button.innerText = "edit";
-      button.className = "button-primary ml-1 w-[20%]";
-      input.className = "input w-[75%] rounded-md";
+      button.className = "edit-primary";
+      input.className = "input-edit";
       input.type = "text";
       input.id = fullInputId;
       containerOfEdit.id = "editContainer";
@@ -177,32 +177,7 @@ function adderTodoList(
       active = !active;
       content.style.display = "none";
       containerOfEdit.append(input, button);
-      console.log(document.getElementById(fullInputId));
       containerOfContent.append(containerOfEdit);
-      input.addEventListener("keydown", (ev) => {
-        if (ev.key.toLowerCase() == "enter") {
-          content.style.display = "block";
-          content.innerText = input.value;
-          containerOfEdit.remove();
-          active = !active;
-          let currentId = id.innerText.split(": ")[1];
-          todoList.splice(
-            todoList.findIndex((item) => item.id == currentId),
-            1,
-            {
-              id: Number(currentId),
-              todo: content.innerText,
-              createdAt: createdAt.innerText.slice(12),
-              updatedAt: getDate(),
-            }
-          );
-          updatedAt.innerText = `Updated at : ${getDate()}`;
-          // ! if the card's content empty
-          if (content.innerText == 0) {
-            containerOfContent.className = "break-all flex-auto h-7";
-          }
-        }
-      });
       button.addEventListener("click", () => {
         content.style.display = "block";
         content.innerText = input.value;
@@ -226,13 +201,9 @@ function adderTodoList(
         }
       });
     } else {
-      document.getElementById(fullInputId).addEventListener("keydown", (ev) => {
-        if (ev.key.toLowerCase() == "enter") {
-          document.getElementById("editContainer").remove();
-          content.style.display = "block";
-          active = !active;
-        }
-      });
+      document.getElementById("editContainer").remove();
+      content.style.display = "block";
+      active = !active;
     }
   });
 
