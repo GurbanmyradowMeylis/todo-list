@@ -7,7 +7,7 @@ document.getElementById("add").addEventListener("click", () => {
 
 // ! gets input's value and returns it
 function inputValueRecipient() {
-  return document.getElementsByTagName("input-content").value;
+  return document.getElementById("input-content").value;
 }
 
 // ! gets date of current time
