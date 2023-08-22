@@ -570,6 +570,7 @@ video {
 
 .\!input {
   resize: both;
+  overflow: hidden;
   border-radius: 22px;
   border-bottom-right-radius: 0px;
   padding-right: 0.5rem;
@@ -605,6 +606,7 @@ video {
 
 .input {
   resize: both;
+  overflow: hidden;
   border-radius: 22px;
   border-bottom-right-radius: 0px;
   padding-right: 0.5rem;
@@ -662,6 +664,13 @@ video {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
+@media not all and (min-width: 768px) {
+  .button-primary {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 .clear-button {
   cursor: pointer;
   border-radius: 0.375rem;
@@ -682,6 +691,13 @@ video {
   background-color: rgb(220 38 38 / var(--tw-bg-opacity));
 }
 
+@media not all and (min-width: 768px) {
+  .clear-button {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+  }
+}
+
 .recycle_bin-primary {
   height: 1.5rem;
   width: 1.5rem;
@@ -698,14 +714,14 @@ video {
   stroke: #ef4444;
 }
 
-@media (max-width: 970px) {
+@media not all and (min-width: 1024px) {
   .recycle_bin-primary {
     height: 1.75rem;
     width: 1.75rem;
   }
 }
 
-@media (max-width: 769px) {
+@media not all and (min-width: 768px) {
   .recycle_bin-primary {
     height: 2.25rem;
     width: 2.25rem;
@@ -729,14 +745,14 @@ video {
   stroke: #f97316;
 }
 
-@media (max-width: 970px) {
+@media not all and (min-width: 1024px) {
   .editor-primary {
     height: 1.75rem;
     width: 1.75rem;
   }
 }
 
-@media (max-width: 769px) {
+@media not all and (min-width: 768px) {
   .editor-primary {
     height: 2.25rem;
     width: 2.25rem;
@@ -753,7 +769,7 @@ video {
   padding-bottom: 1.25rem;
 }
 
-@media (max-width: 769px) {
+@media not all and (min-width: 768px) {
   .cards__parent-cards {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -781,7 +797,7 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-@media (max-width: 970px) {
+@media not all and (min-width: 1024px) {
   .card {
     gap: 1.25rem;
   }
@@ -798,7 +814,7 @@ video {
   gap: 0.25rem;
 }
 
-@media (max-width: 769px) {
+@media not all and (min-width: 768px) {
   .card__svgs {
     gap: 0.75rem;
   }
@@ -835,13 +851,13 @@ video {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
-@media (max-width: 970px) {
+@media not all and (min-width: 1024px) {
   .edit-primary {
     width: 33.333333%;
   }
 }
 
-@media (max-width: 769px) {
+@media not all and (min-width: 768px) {
   .edit-primary {
     height: 2.5rem;
     font-size: 1.25rem;
@@ -883,9 +899,9 @@ video {
   outline-color: #581c87;
 }
 
-@media (max-width: 970px) {
+@media not all and (min-width: 1024px) {
   .input-edit {
-    width: 65%;
+    width: 66.666667%;
   }
 }
 
@@ -2229,11 +2245,6 @@ video {
 
 .align-super {
   vertical-align: super;
-}
-
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
 }
 
 .text-4xl {

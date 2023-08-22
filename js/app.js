@@ -5,21 +5,9 @@ document.getElementById("add").addEventListener("click", () => {
   adderTodoList(identifier, inputValueRecipient(), getDate(), getDate(), true);
 });
 
-document.getElementById("input-content").addEventListener("keydown", (ev) => {
-  if (ev.key === "Enter") {
-    adderTodoList(
-      identifier,
-      inputValueRecipient(),
-      getDate(),
-      getDate(),
-      true
-    );
-  }
-});
-
 // ! gets input's value and returns it
 function inputValueRecipient() {
-  return document.getElementsByTagName("input").item(0).value;
+  return document.getElementsByTagName("input-content").value;
 }
 
 // ! gets date of current time
