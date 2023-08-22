@@ -18,13 +18,16 @@
           TO DO LIST
         </h1>
         <div class="flex justify-center gap-5">
-          <input
-            type="text"
+          <textarea
             placeholder="type text..."
             class="input"
             id="input-content"
-          />
-          <button class="button-primary" id="add">ADD</button>
+            rows="1"
+            cols="25"
+          ></textarea>
+          <div class="flex flex-col">
+            <button class="button-primary" id="add">ADD</button>
+          </div>
         </div>
         <div class="flex justify-center">
           <button class="clear-button text-2xl" id="removerAll">
@@ -76,7 +79,7 @@
         <div class="cards__parent-cards" id="wrapperOfCard"></div>
       </section>
     </div>
-
+    <textarea class="resize" cols="30" rows="10"></textarea>
     <script src="./js/app.js"></script>
   </body>
 </html>

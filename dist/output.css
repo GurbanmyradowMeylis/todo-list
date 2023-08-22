@@ -569,7 +569,9 @@ video {
 }
 
 .\!input {
+  resize: both;
   border-radius: 22px;
+  border-bottom-right-radius: 0px;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -602,7 +604,9 @@ video {
 }
 
 .input {
+  resize: both;
   border-radius: 22px;
+  border-bottom-right-radius: 0px;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -635,7 +639,11 @@ video {
 }
 
 .button-primary {
+  display: flex;
+  flex-grow: 0;
   cursor: pointer;
+  align-items: center;
+  justify-content: center;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
