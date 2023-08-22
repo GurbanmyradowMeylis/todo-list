@@ -6,7 +6,7 @@ document.getElementById("add").addEventListener("click", () => {
 });
 
 document.getElementById("input-content").addEventListener("keydown", (ev) => {
-  if (ev.key.toLowerCase() === "enter") {
+  if (ev.key === "Enter") {
     adderTodoList(
       identifier,
       inputValueRecipient(),
@@ -96,7 +96,7 @@ function adderTodoList(
   container.className = "card";
   content.className = "text-lg";
 
-  containerOfDate.className = "text-[#999999] flex-auto flex flex-col gap-3";
+  containerOfDate.className = "container-date";
   containerOfSvgs.className = "card__svgs";
   id.className = "card__id";
   // ! end
@@ -149,9 +149,7 @@ function adderTodoList(
     }
   });
 
-  let fullInputId = `iasqgqedwwdsd-1fbhiewbufbcqalruvcbjqw3ui-nbuv29hd12bmn${idForInput}uoqbfljqenI30EGDBGNBWKEH`;
-  containerOfEditor.href = `#${fullInputId}`;
-
+  let fullInputId = `input-id-${idForInput}`;
   // ! appends childs into the parent
   let clonedEditor = svgCopier(editor, remover).editor;
   containerOfId.append(id);
@@ -178,7 +176,21 @@ function adderTodoList(
       content.style.display = "none";
       containerOfEdit.append(input, button);
       containerOfContent.append(containerOfEdit);
+      input.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+        inline: "center",
+      });
+      input.focus();
+      input.onkeydown = (ev) => {
+        if (ev.key == "Enter") {
+          submitEditInput();
+        }
+      };
       button.addEventListener("click", () => {
+        submitEditInput();
+      });
+      function submitEditInput() {
         content.style.display = "block";
         content.innerText = input.value;
         containerOfEdit.remove();
@@ -199,7 +211,7 @@ function adderTodoList(
         if (content.innerText == 0) {
           containerOfContent.className = "break-all flex-auto h-7";
         }
-      });
+      }
     } else {
       document.getElementById("editContainer").remove();
       content.style.display = "block";
