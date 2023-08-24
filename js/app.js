@@ -3,6 +3,7 @@ let todoList = [],
 // ! when clickes the button add
 document.getElementById("add").addEventListener("click", () => {
   adderTodoList(identifier, inputValueRecipient(), getDate(), getDate(), true);
+  document.getElementById("input-content").value = "";
 });
 
 // ! gets input's value and returns it

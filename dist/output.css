@@ -586,11 +586,15 @@ video {
 }
 
 .\!input::-moz-placeholder {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(127 2 189 / var(--tw-text-opacity));
 }
 
 .\!input::placeholder {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(127 2 189 / var(--tw-text-opacity));
 }
@@ -621,11 +625,15 @@ video {
 }
 
 .input::-moz-placeholder {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(127 2 189 / var(--tw-text-opacity));
 }
 
 .input::placeholder {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   --tw-text-opacity: 1;
   color: rgb(127 2 189 / var(--tw-text-opacity));
 }
