@@ -836,8 +836,7 @@ video {
 }
 
 .edit-primary {
-  margin-left: 0.25rem;
-  width: 20%;
+  flex: 0 1 25%;
   cursor: pointer;
   border-radius: 0.375rem;
   --tw-bg-opacity: 1;
@@ -857,12 +856,6 @@ video {
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
 
-@media not all and (min-width: 1024px) {
-  .edit-primary {
-    width: 33.333333%;
-  }
-}
-
 @media not all and (min-width: 768px) {
   .edit-primary {
     height: 2.5rem;
@@ -872,7 +865,7 @@ video {
 }
 
 .input-edit {
-  width: 75%;
+  flex: 0 1 75%;
   border-radius: 0.375rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -905,10 +898,10 @@ video {
   outline-color: #581c87;
 }
 
-@media not all and (min-width: 1024px) {
-  .input-edit {
-    width: 66.666667%;
-  }
+#editContainer {
+  display: flex;
+  -moz-column-gap: 0.75rem;
+       column-gap: 0.75rem;
 }
 
 .sr-only {
